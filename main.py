@@ -10,7 +10,6 @@ class Flower(BaseModel):
     name: str
     description: str
     price: float
-    #is_offer: Union[bool, None] = None
 
 
 @app.get("/")
@@ -32,8 +31,3 @@ def get_flower(flower_id: int, item: Flower):
             "item_name": item.name,
             "item_description": item.description
             }
-
-
-# @app.put("/items/{item_id}")
-# def update_item(item_id: int, item: Flower):
-#     return {"item_name": item.name, "item_id": item_id}
