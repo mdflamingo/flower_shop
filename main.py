@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from models import Flowers
 
+from database import *
+
+Base.metadata.create_all(bind=engine)
+
 app = FastAPI()
 
 
